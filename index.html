@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مہا جیولرز | Maha Jewlers - سوہا بازار، لاہور</title>
+<meta name="description" content="مہا جیولرز، محمد علی روڈ، سوہا بازار، لاہور۔ نفیس اور خوبصورت جیولری کے منفرد ڈیزائنز۔ واٹس ایپ پر آرڈر کریں۔">
+<meta name="theme-color" content="#4a1424">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* رنگ بدلنے کے لیے ایڈمن پینل میں "رنگوں کی اسکیم" چنیں۔ یہ قدریں ڈیفالٹ ہیں۔ */
+    --wine:#4a1424; --wine-2:#6b1f37; --wine-3:#8a2d4a; --deep:#35101c; --deep-2:#220a12;
+    --gold:#c9a24d; --gold-2:#e6c77b; --gold-3:#a8832f;
+    --cream:#fbf6ee; --cream-2:#f3e9d8; --line:#eadfcb; --ink:#2a1a1f; --muted:#6f5c5f;
+    --wine-rgb:74 20 36; --wine3-rgb:138 45 74; --deep-rgb:53 16 28; --gold-rgb:201 162 77; --gold2-rgb:230 199 123;
+    --wa:#25a55a; --wa-2:#1e8a4a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{
+    font-family:'Noto Sans Arabic',sans-serif;
+    background:var(--cream); color:var(--ink);
+    line-height:1.9; -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:40;
+    background:rgb(var(--wine-rgb) / .96);backdrop-filter:blur(8px);
+    border-bottom:1px solid rgb(var(--gold-rgb) / .35);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{
+    width:44px;height:44px;border-radius:50%;
+    border:1.5px solid var(--gold);display:grid;place-items:center;
+    color:var(--gold-2);font-weight:800;font-size:22px;line-height:1;
+    background:radial-gradient(circle at 30% 30%,rgb(var(--gold2-rgb) / .25),transparent 70%);
+  }
+  .brand-text strong{display:block;color:var(--gold-2);font-size:22px;font-weight:800;line-height:1.3}
+  .brand-text span{display:block;color:rgba(255,255,255,.65);font-size:10.5px;letter-spacing:.28em;line-height:1.2}
+  nav ul{display:flex;gap:28px;list-style:none}
+  nav a{color:rgba(255,255,255,.85);font-size:15px;font-weight:500;transition:color .2s}
+  nav a:hover{color:var(--gold-2)}
+  .nav-cta{
+    background:linear-gradient(135deg,var(--gold-2),var(--gold));
+    color:var(--wine);font-weight:700;font-size:14px;padding:8px 18px;border-radius:999px;
+    display:inline-flex;align-items:center;gap:8px;white-space:nowrap;transition:transform .2s,box-shadow .2s;
+  }
+  .nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgb(var(--gold-rgb) / .35)}
+  .ico{width:18px;height:18px;fill:currentColor;flex:none}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;color:#fff;
+    background:
+      radial-gradient(1000px 500px at 85% -10%,rgb(var(--gold-rgb) / .22),transparent 60%),
+      radial-gradient(700px 400px at 0% 100%,rgb(var(--wine3-rgb) / .55),transparent 60%),
+      linear-gradient(160deg,var(--wine) 0%,var(--deep) 100%);
+    padding:72px 0 88px;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:auto 0 0 0;height:6px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.7;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .eyebrow{
+    display:inline-block;color:var(--gold-2);font-size:14px;font-weight:600;
+    padding:4px 16px;border:1px solid rgb(var(--gold2-rgb) / .5);border-radius:999px;margin-bottom:18px;
+  }
+  .hero h1{font-size:clamp(34px,5.4vw,60px);font-weight:800;line-height:1.5;margin-bottom:6px}
+  .hero h1 em{font-style:normal;color:var(--gold-2)}
+  .hero p.lead{font-size:17px;color:rgba(255,255,255,.82);max-width:540px;margin:14px 0 30px}
+  .btn-row{display:flex;flex-wrap:wrap;gap:14px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    padding:13px 28px;border-radius:14px;font-weight:700;font-size:16px;
+    font-family:inherit;cursor:pointer;border:0;transition:transform .2s,box-shadow .2s,background .2s;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:var(--wine);box-shadow:0 8px 22px rgb(var(--gold-rgb) / .3)}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+  .btn-ghost:hover{background:rgba(255,255,255,.08)}
+  .btn-wa{background:var(--wa);color:#fff;box-shadow:0 8px 20px rgba(37,165,90,.28)}
+  .btn-wa:hover{background:var(--wa-2)}
+
+  .hero-art{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:end}
+  .arch{
+    border-radius:999px 999px 18px 18px;overflow:hidden;
+    border:2px solid rgb(var(--gold2-rgb) / .7);
+    box-shadow:0 18px 40px rgba(0,0,0,.35);background:var(--deep-2);
+  }
+  .arch img{width:100%;height:100%;object-fit:cover}
+  .arch.a1{aspect-ratio:3/4.3}
+  .arch.a2{aspect-ratio:3/3.6;margin-bottom:34px}
+
+  /* ---------- sections ---------- */
+  section{padding:84px 0}
+  .head{text-align:center;max-width:680px;margin:0 auto 52px}
+  .head small{color:var(--gold-3);font-weight:700;font-size:14px;letter-spacing:.04em}
+  .head h2{font-size:clamp(28px,4vw,40px);font-weight:800;color:var(--wine);line-height:1.6}
+  .orn{display:flex;align-items:center;justify-content:center;gap:12px;margin:10px 0 12px}
+  .orn i{display:block;width:64px;height:1.5px;background:linear-gradient(90deg,transparent,var(--gold))}
+  .orn i:last-child{background:linear-gradient(270deg,transparent,var(--gold))}
+  .orn b{width:9px;height:9px;background:var(--gold);transform:rotate(45deg)}
+  .head p{color:var(--muted);font-size:16px}
+
+  /* ---------- products ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:26px}
+  .card{
+    background:#fff;border-radius:20px;overflow:hidden;
+    border:1px solid var(--line);display:flex;flex-direction:column;
+    transition:transform .3s,box-shadow .3s;
+  }
+  .card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgb(var(--wine-rgb) / .14)}
+  .shot{
+    position:relative;aspect-ratio:4/5;background:var(--cream-2);cursor:zoom-in;overflow:hidden;
+  }
+  .shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .card:hover .shot img{transform:scale(1.06)}
+  .zoom{
+    position:absolute;bottom:12px;left:12px;background:rgb(var(--wine-rgb) / .82);color:#fff;
+    font-size:12px;padding:3px 12px;border-radius:999px;opacity:0;transition:opacity .3s;
+  }
+  .card:hover .zoom{opacity:1}
+  .info{padding:20px 20px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .info h3{font-size:18px;font-weight:700;color:var(--wine);line-height:1.6}
+  .info p.d{font-size:13.5px;color:var(--muted);line-height:1.8;flex:1}
+  .price{display:flex;align-items:baseline;gap:6px;margin:6px 0 10px;color:var(--gold-3)}
+  .price b{font-size:24px;font-weight:800;color:var(--wine-2);direction:ltr}
+  .price span{font-size:14px;font-weight:600}
+  .price.ask b{font-size:16px;color:var(--wine-2);direction:rtl}
+  .info .btn{width:100%;padding:11px 16px;font-size:15px;border-radius:12px}
+
+  /* ---------- features ---------- */
+  .features{background:linear-gradient(180deg,var(--cream-2),var(--cream))}
+  .f-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+  .feat{
+    background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px 24px;text-align:center;
+  }
+  .feat .ic{
+    width:62px;height:62px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--wine-2),var(--wine));color:var(--gold-2);
+    box-shadow:0 0 0 5px rgb(var(--gold-rgb) / .2);
+  }
+  .feat .ic svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .feat h3{font-size:18px;font-weight:700;color:var(--wine);margin-bottom:4px}
+  .feat p{font-size:14.5px;color:var(--muted)}
+
+  /* ---------- contact ---------- */
+  .contact{
+    background:linear-gradient(160deg,var(--wine),var(--deep));color:#fff;position:relative;overflow:hidden;
+  }
+  .contact::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(600px 300px at 90% 0%,rgb(var(--gold-rgb) / .18),transparent 70%);
+  }
+  .contact .wrap{position:relative}
+  .c-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:stretch}
+  .c-box{
+    background:rgba(255,255,255,.06);border:1px solid rgb(var(--gold2-rgb) / .3);
+    border-radius:22px;padding:34px 30px;
+  }
+  .c-box h2{color:var(--gold-2);font-size:28px;font-weight:800;margin-bottom:6px}
+  .c-box p.s{color:rgba(255,255,255,.78);margin-bottom:22px}
+  .c-list{list-style:none;display:grid;gap:16px}
+  .c-list li{display:flex;gap:14px;align-items:flex-start}
+  .c-list .ci{
+    flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
+    border:1px solid rgb(var(--gold2-rgb) / .6);color:var(--gold-2);
+  }
+  .c-list .ci svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .c-list small{display:block;color:rgba(255,255,255,.6);font-size:12.5px;line-height:1.5}
+  .c-list span.v{font-size:16.5px;font-weight:600}
+  .c-list .ltr{direction:ltr;unicode-bidi:embed;display:inline-block}
+  .c-cta{display:flex;flex-direction:column;justify-content:center;gap:14px;text-align:center}
+  .c-cta .big{font-size:20px;font-weight:700}
+  .c-cta .btn{width:100%;font-size:17px;padding:15px 20px}
+
+  footer{background:var(--deep-2);color:rgba(255,255,255,.6);text-align:center;padding:22px 0;font-size:13.5px}
+  footer b{color:var(--gold-2);font-weight:600}
+
+  /* ---------- floating WhatsApp ---------- */
+  .fab{
+    position:fixed;bottom:22px;left:22px;z-index:50;
+    display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;
+    padding:12px 20px 12px 16px;border-radius:999px;font-weight:700;font-size:15px;
+    box-shadow:0 10px 26px rgba(0,0,0,.28);transition:transform .2s,background .2s;
+  }
+  .fab:hover{transform:translateY(-3px);background:var(--wa-2)}
+  .fab svg{width:26px;height:26px;fill:#fff}
+  .fab::before{
+    content:"";position:absolute;inset:0;border-radius:inherit;border:2px solid var(--wa);
+    animation:ring 2.2s infinite;
+  }
+  @keyframes ring{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.3);opacity:0}}
+
+  /* ---------- lightbox ---------- */
+  .lb{
+    position:fixed;inset:0;z-index:80;background:rgb(var(--deep-rgb) / .88);display:none;
+    align-items:center;justify-content:center;padding:20px;
+  }
+  .lb.open{display:flex}
+  .lb-box{
+    background:#fff;border-radius:20px;max-width:620px;width:100%;overflow:hidden;
+    max-height:92vh;display:flex;flex-direction:column;position:relative;
+  }
+  .lb-img{background:var(--cream-2);display:flex;justify-content:center;max-height:58vh;overflow:hidden}
+  .lb-img img{max-height:58vh;width:auto;max-width:100%;object-fit:contain;min-width:260px}
+  .lb-info{padding:18px 22px 22px;display:grid;gap:4px}
+  .lb-info h3{font-size:20px;color:var(--wine);font-weight:800}
+  .lb-info .price{margin:0 0 8px}
+  .lb-x{
+    position:absolute;top:12px;left:12px;width:38px;height:38px;border-radius:50%;border:0;cursor:pointer;
+    background:rgba(255,255,255,.92);font-size:20px;color:var(--wine);z-index:2;font-family:inherit;
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    nav ul{display:none}
+    .hero{padding:48px 0 64px}
+    .hero-grid{grid-template-columns:1fr;gap:40px;text-align:center}
+    .hero p.lead{margin-inline:auto}
+    .btn-row{justify-content:center}
+    .hero-art{max-width:400px;margin:0 auto}
+    .c-grid{grid-template-columns:1fr}
+    section{padding:60px 0}
+  }
+  @media (max-width:560px){
+    .brand-text strong{font-size:19px}
+    .nav-cta span.t{display:none}
+    .nav-cta{padding:9px 12px}
+    .grid{grid-template-columns:repeat(2,1fr);gap:14px}
+    .info{padding:14px 12px 16px}
+    .info h3{font-size:15px}
+    .info p.d{display:none}
+    .price b{font-size:19px}
+    .info .btn{font-size:13.5px;padding:10px 8px;gap:6px}
+    .info .btn .ico{width:16px;height:16px}
+    .fab span{display:none}
+    .fab{padding:14px}
+    .c-box{padding:26px 20px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="مہا جیولرز">
+      <div class="brand-mark">م</div>
+      <div class="brand-text">
+        <strong>مہا جیولرز</strong>
+        <span>MAHA JEWLERS</span>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#top">ہوم</a></li>
+        <li><a href="#collection">کلیکشن</a></li>
+        <li><a href="#why">ہماری خصوصیات</a></li>
+        <li><a href="#contact">رابطہ</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" data-wa="السلام علیکم! مجھے مہا جیولرز کی جیولری کے بارے میں معلومات چاہییں۔" href="#" target="_blank" rel="noopener">
+      <svg class="ico" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+      <span class="t">واٹس ایپ</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow" data-key="hero_eyebrow">سوہا بازار، لاہور</span>
+        <h1><span data-key="hero_title_1">خوبصورتی اور روایت کا</span><br><em data-key="hero_title_2">حسین امتزاج</em></h1>
+        <p class="lead" data-key="hero_text">مہا جیولرز میں آپ کو ملیں گے نفیس اور منفرد ڈیزائنز، جو ہر خوشی اور ہر تقریب کو مزید یادگار بنا دیں۔ اپنی پسند کا سیٹ دیکھیں اور واٹس ایپ پر فوراً آرڈر کریں۔</p>
+        <div class="btn-row">
+          <a href="#collection" class="btn btn-gold">کلیکشن دیکھیں</a>
+          <a data-wa="السلام علیکم! مجھے مہا جیولرز سے خریداری کرنی ہے۔" href="#" target="_blank" rel="noopener" class="btn btn-ghost">
+            <svg class="ico" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+            واٹس ایپ پر بات کریں
+          </a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="arch a1"><img src="images/jewel-2.jpg" alt=""></div>
+        <div class="arch a2"><img src="images/jewel-5.jpg" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="collection">
+    <div class="wrap">
+      <div class="head">
+        <small>ہماری کلیکشن</small>
+        <h2 data-key="collection_title">منتخب اور دلکش ڈیزائنز</h2>
+        <div class="orn"><i></i><b></b><i></i></div>
+        <p data-key="collection_subtitle">اپنی پسند کے ڈیزائن پر "آرڈر کریں" دبائیں، آپ کا پیغام نام اور قیمت کے ساتھ خود واٹس ایپ میں تیار مل جائے گا۔</p>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="features" id="why">
+    <div class="wrap">
+      <div class="head">
+        <small>ہم پر بھروسہ کیوں؟</small>
+        <h2>ہماری خصوصیات</h2>
+        <div class="orn"><i></i><b></b><i></i></div>
+      </div>
+      <div class="f-grid">
+        <div class="feat">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3l3 6 3-6M12 21 9 9m3 12 3-12"/></svg></div>
+          <h3>منفرد ڈیزائنز</h3>
+          <p>روایتی اور جدید انداز کے خوبصورت سیٹ، ہار، بالیاں اور کڑے۔</p>
+        </div>
+        <div class="feat">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg></div>
+          <h3>ہر موقع کے لیے</h3>
+          <p>شادی بیاہ، منگنی اور خاص تقریبات کے لیے مناسب انتخاب۔</p>
+        </div>
+        <div class="feat">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.7-5.2A8.5 8.5 0 1 1 21 12z"/><path d="M8.5 10h7M8.5 13.5h4.5"/></svg></div>
+          <h3>آسان واٹس ایپ آرڈر</h3>
+          <p>کسی فارم کے بغیر، بس ایک کلک پر ہم سے بات کریں اور آرڈر دیں۔</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap c-grid">
+      <div class="c-box">
+        <h2>ہم سے رابطہ کریں</h2>
+        <p class="s">دکان پر تشریف لائیں یا واٹس ایپ پر پیغام بھیجیں۔</p>
+        <ul class="c-list">
+          <li>
+            <div class="ci"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+            <div><small>پتہ</small><span class="v" data-key="address">محمد علی روڈ، سوہا بازار، لاہور</span></div>
+          </li>
+          <li>
+            <div class="ci"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></div>
+            <div><small>واٹس ایپ نمبر</small><span class="v ltr" data-key="whatsapp_display">0321 8800544</span></div>
+          </li>
+        </ul>
+      </div>
+      <div class="c-box c-cta">
+        <div class="big">اپنی پسند کا ڈیزائن بھیجیں یا قیمت پوچھیں</div>
+        <a data-wa="السلام علیکم! مجھے مہا جیولرز سے جیولری کے بارے میں بات کرنی ہے۔" href="#" target="_blank" rel="noopener" class="btn btn-wa">
+          <svg class="ico" style="width:24px;height:24px" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+          واٹس ایپ پر پیغام بھیجیں
+        </a>
+        <a class="btn btn-ghost" id="maplink" href="https://www.google.com/maps/search/?api=1&query=Mohammad+Ali+Road+Sohra+Bazar+Lahore" target="_blank" rel="noopener">نقشے پر دیکھیں</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> <b>مہا جیولرز (Maha Jewlers)</b> · <span data-key="address">محمد علی روڈ، سوہا بازار، لاہور</span> · جملہ حقوق محفوظ ہیں</div>
+</footer>
+
+<a class="fab" data-wa="السلام علیکم! مجھے مہا جیولرز کی جیولری کے بارے میں معلومات چاہییں۔" href="#" target="_blank" rel="noopener" aria-label="واٹس ایپ پر رابطہ کریں">
+  <svg viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+  <span>واٹس ایپ پر رابطہ کریں</span>
+</a>
+
+<!-- lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true">
+  <div class="lb-box">
+    <button class="lb-x" id="lbx" aria-label="بند کریں">✕</button>
+    <div class="lb-img"><img id="lbimg" src="" alt=""></div>
+    <div class="lb-info">
+      <h3 id="lbt"></h3>
+      <div class="price" id="lbp"></div>
+      <p class="d" id="lbd" style="color:var(--muted);font-size:14px"></p>
+      <a class="btn btn-wa" id="lbw" href="#" target="_blank" rel="noopener" style="margin-top:10px">
+        <svg class="ico" style="width:22px;height:22px" viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+        واٹس ایپ پر آرڈر کریں
+      </a>
+    </div>
+  </div>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </symbol>
+</svg>
+
+<script>
+/* یہ فہرست صرف "بیک اپ" ہے (جب content.json نہ ملے، مثلاً کمپیوٹر پر ڈبل کلک سے کھولنے پر)۔
+   اصل مواد ایڈمن پینل (/admin) سے بدلیں۔ */
+const DEFAULT_CONTENT = {
+  "site": {
+    "theme": "burgundy",
+    "hero_eyebrow": "سوہا بازار، لاہور",
+    "hero_title_1": "خوبصورتی اور روایت کا",
+    "hero_title_2": "حسین امتزاج",
+    "hero_text": "مہا جیولرز میں آپ کو ملیں گے نفیس اور منفرد ڈیزائنز، جو ہر خوشی اور ہر تقریب کو مزید یادگار بنا دیں۔ اپنی پسند کا سیٹ دیکھیں اور واٹس ایپ پر فوراً آرڈر کریں۔",
+    "collection_title": "منتخب اور دلکش ڈیزائنز",
+    "collection_subtitle": "اپنی پسند کے ڈیزائن پر \"آرڈر کریں\" دبائیں، آپ کا پیغام نام اور قیمت کے ساتھ خود واٹس ایپ میں تیار مل جائے گا۔",
+    "address": "محمد علی روڈ، سوہا بازار، لاہور",
+    "map_query": "Mohammad Ali Road Sohra Bazar Lahore",
+    "whatsapp": "923218800544",
+    "whatsapp_display": "0321 8800544"
+  },
+  "products": [
+    {
+      "name": "روایتی نیکلس سیٹ",
+      "price": 85000,
+      "image": "/images/jewel-1.jpg",
+      "desc": "ہار اور جھمکوں کا خوبصورت روایتی سیٹ، سرخ نگوں کے ساتھ۔"
+    },
+    {
+      "name": "کندن نیکلس سیٹ (سبز نگینے)",
+      "price": 95000,
+      "image": "/images/jewel-2.jpg",
+      "desc": "کندن کے نفیس کام اور موتیوں کی لڑیوں والا سیٹ، ہم رنگ بالیوں کے ساتھ۔"
+    },
+    {
+      "name": "نفیس کڑے (جوڑا)",
+      "price": 120000,
+      "image": "/images/jewel-3.jpg",
+      "desc": "باریک کام والے خوبصورت کڑوں کا جوڑا۔"
+    },
+    {
+      "name": "چاند بالی جھمکے (سبز موتی)",
+      "price": 28000,
+      "image": "/images/jewel-4.jpg",
+      "desc": "کندن انداز کی چاند بالیاں، سبز موتیوں کی لڑیوں کے ساتھ۔"
+    },
+    {
+      "name": "نیلے نگوں والا نیکلس سیٹ",
+      "price": 78000,
+      "image": "/images/jewel-5.jpg",
+      "desc": "جدید انداز کا ہلکا اور نفیس سیٹ، نیلے نگینوں کے ساتھ۔"
+    },
+    {
+      "name": "مکمل جیولری سیٹ",
+      "price": 210000,
+      "image": "/images/jewel-6.webp",
+      "desc": "ہار، بالیاں، کڑا اور انگوٹھی پر مشتمل مکمل سیٹ۔"
+    },
+    {
+      "name": "سرخ نگوں والی چاند بالیاں",
+      "price": 35000,
+      "image": "/images/jewel-7.jpg",
+      "desc": "سرخ اور سبز نگینوں سے سجی بڑی چاند بالیاں۔"
+    }
+  ]
+};
+
+const THEMES = {
+  burgundy: { wine:"#4a1424", wine2:"#6b1f37", wine3:"#8a2d4a", deep:"#35101c", deep2:"#220a12", gold:"#c9a24d", gold2:"#e6c77b", gold3:"#a8832f", cream:"#fbf6ee", cream2:"#f3e9d8", line:"#eadfcb", muted:"#6f5c5f" },
+  emerald:  { wine:"#0f3d33", wine2:"#17554a", wine3:"#22705f", deep:"#0a2a23", deep2:"#061a16", gold:"#c9a24d", gold2:"#e6c77b", gold3:"#a8832f", cream:"#f8f6ee", cream2:"#eee9d6", line:"#e3dcc3", muted:"#596662" },
+  navy:     { wine:"#14274a", wine2:"#1d3a6b", wine3:"#2a4f8c", deep:"#0e1c36", deep2:"#08111f", gold:"#c9a24d", gold2:"#e6c77b", gold3:"#a8832f", cream:"#f7f6f2", cream2:"#ebe8df", line:"#ddd8c8", muted:"#5a6070" },
+  black:    { wine:"#1b1b1b", wine2:"#2e2e2e", wine3:"#474747", deep:"#121212", deep2:"#0a0a0a", gold:"#d4af37", gold2:"#f0d36f", gold3:"#a8851c", cream:"#faf8f3", cream2:"#efebe0", line:"#e4dfd0", muted:"#666666" },
+  rose:     { wine:"#8a2150", wine2:"#a82c63", wine3:"#c43c78", deep:"#5e1236", deep2:"#3f0a24", gold:"#c9967c", gold2:"#e8bfa9", gold3:"#a8705a", cream:"#fdf6f6", cream2:"#f7e6e6", line:"#efd8d8", muted:"#7a6064" }
+};
+const hexRGB = h => [1,3,5].map(i => parseInt(h.substr(i,2),16)).join(' ');
+function applyTheme(name) {
+  const th = THEMES[name] || THEMES.burgundy, s = document.documentElement.style;
+  s.setProperty('--wine', th.wine); s.setProperty('--wine-2', th.wine2); s.setProperty('--wine-3', th.wine3);
+  s.setProperty('--deep', th.deep); s.setProperty('--deep-2', th.deep2);
+  s.setProperty('--gold', th.gold); s.setProperty('--gold-2', th.gold2); s.setProperty('--gold-3', th.gold3);
+  s.setProperty('--cream', th.cream); s.setProperty('--cream-2', th.cream2); s.setProperty('--line', th.line); s.setProperty('--muted', th.muted);
+  s.setProperty('--wine-rgb', hexRGB(th.wine)); s.setProperty('--wine3-rgb', hexRGB(th.wine3)); s.setProperty('--deep-rgb', hexRGB(th.deep));
+  s.setProperty('--gold-rgb', hexRGB(th.gold)); s.setProperty('--gold2-rgb', hexRGB(th.gold2));
+  const m = document.querySelector('meta[name="theme-color"]'); if (m) m.content = th.wine;
+}
+
+let WA_NUMBER = "923218800544";
+let PRODUCTS = [];
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+const waLink = msg => 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+const hasPrice = p => p.price !== "" && p.price !== null && p.price !== undefined && Number(p.price) > 0;
+const fmt = n => Number(n).toLocaleString('en-US');
+const priceHTML = p => hasPrice(p)
+  ? '<b>' + fmt(p.price) + '</b><span>روپے</span>'
+  : '<b>قیمت کے لیے رابطہ کریں</b>';
+const orderMsg = p => 'السلام علیکم! مجھے مہا جیولرز سے یہ جیولری لینی ہے:\n\n*ڈیزائن:* ' + p.name +
+  (hasPrice(p) ? '\n*قیمت:* ' + fmt(p.price) + ' روپے' : '') + '\n\nبرائے مہربانی مزید تفصیل بتائیں۔';
+const imgSrc = s => (location.protocol === 'file:' ? String(s || '').replace(/^\//, '') : String(s || ''));
+const WA_ICON = '<svg class="ico" viewBox="0 0 24 24"><use href="#i-wa"/></svg>';
+
+function renderProducts() {
+  $('grid').innerHTML = PRODUCTS.map((p, i) => `
+    <article class="card">
+      <div class="shot" data-i="${i}" role="button" tabindex="0" aria-label="${esc(p.name)} - بڑا کر کے دیکھیں">
+        <img src="${esc(imgSrc(p.image))}" alt="${esc(p.name)}" loading="lazy">
+        <span class="zoom">بڑا دیکھیں</span>
+      </div>
+      <div class="info">
+        <h3>${esc(p.name)}</h3>
+        <p class="d">${esc(p.desc || '')}</p>
+        <div class="price ${hasPrice(p) ? '' : 'ask'}">${priceHTML(p)}</div>
+        <a class="btn btn-wa" href="${waLink(orderMsg(p))}" target="_blank" rel="noopener">${WA_ICON} آرڈر کریں</a>
+      </div>
+    </article>`).join('');
+  document.querySelectorAll('.shot').forEach(el => {
+    el.addEventListener('click', () => openLB(+el.dataset.i));
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLB(+el.dataset.i); } });
+  });
+}
+
+function applyContent(data) {
+  const site = (data && data.site) || {};
+  applyTheme(site.theme);
+  if (site.whatsapp) WA_NUMBER = String(site.whatsapp).replace(/\D/g, '');
+  document.querySelectorAll('[data-key]').forEach(el => {
+    const v = site[el.dataset.key];
+    if (v !== undefined && v !== null && String(v).trim() !== '') el.textContent = v;
+  });
+  if (site.map_query) {
+    $('maplink').href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(site.map_query);
+  }
+  PRODUCTS = ((data && data.products) || []).filter(p => p && p.name && p.image);
+  renderProducts();
+  document.querySelectorAll('[data-wa]').forEach(a => a.href = waLink(a.dataset.wa));
+}
+
+async function init() {
+  $('yr').textContent = new Date().getFullYear();
+  let data = DEFAULT_CONTENT;
+  try {
+    const res = await fetch('content.json', { cache: 'no-cache' });
+    if (res.ok) data = await res.json();
+  } catch (e) { /* بیک اپ مواد استعمال ہوگا */ }
+  applyContent(data);
+}
+
+/* بڑی تصویر والی کھڑکی */
+function openLB(i){
+  const p = PRODUCTS[i]; if (!p) return;
+  $('lbimg').src = imgSrc(p.image); $('lbimg').alt = p.name;
+  $('lbt').textContent = p.name;
+  $('lbd').textContent = p.desc || '';
+  $('lbp').className = 'price ' + (hasPrice(p) ? '' : 'ask');
+  $('lbp').innerHTML = priceHTML(p);
+  $('lbw').href = waLink(orderMsg(p));
+  $('lb').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLB(){ $('lb').classList.remove('open'); document.body.style.overflow = ''; }
+$('lbx').addEventListener('click', closeLB);
+$('lb').addEventListener('click', e => { if (e.target === $('lb')) closeLB(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(); });
+
+init();
+</script>
+</body>
+</html>

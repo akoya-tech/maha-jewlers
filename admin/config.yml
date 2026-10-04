@@ -1,0 +1,51 @@
+backend:
+  name: github
+  repo: akoya-tech/maha-jewlers
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "site"
+    label: "مہا جیولرز"
+    files:
+      - name: "content"
+        label: "سائٹ کا مواد"
+        file: "content.json"
+        fields:
+          - label: "ٹیکسٹ"
+            name: "site"
+            widget: "object"
+            fields:
+              - label: "رنگوں کی اسکیم"
+                name: "theme"
+                widget: "select"
+                default: "burgundy"
+                options:
+                  - { label: "عنابی اور سنہری (موجودہ)", value: "burgundy" }
+                  - { label: "گہرا سبز اور سنہری", value: "emerald" }
+                  - { label: "گہرا نیلا اور سنہری", value: "navy" }
+                  - { label: "کالا اور سنہری", value: "black" }
+                  - { label: "گلابی اور روز گولڈ", value: "rose" }
+              - { label: "ہیرو: چھوٹا لیبل", name: "hero_eyebrow", widget: "string" }
+              - { label: "ہیرو عنوان: پہلی سطر", name: "hero_title_1", widget: "string" }
+              - { label: "ہیرو عنوان: سنہری سطر", name: "hero_title_2", widget: "string" }
+              - { label: "ہیرو: تعارفی پیراگراف", name: "hero_text", widget: "text" }
+              - { label: "کلیکشن کا عنوان", name: "collection_title", widget: "string" }
+              - { label: "کلیکشن کی ذیلی سطر", name: "collection_subtitle", widget: "text" }
+              - { label: "پتہ", name: "address", widget: "string" }
+              - { label: "نقشے کی تلاش کا متن (انگریزی بہتر، مثلاً Mohammad Ali Road Sohra Bazar Lahore)", name: "map_query", widget: "string" }
+              - { label: "واٹس ایپ نمبر (لنک کے لیے، بغیر + کے، مثلاً 923218800544)", name: "whatsapp", widget: "string" }
+              - { label: "واٹس ایپ نمبر (دکھانے کے لیے)", name: "whatsapp_display", widget: "string" }
+
+          - label: "جیولری (ہر آئٹم کی الگ قیمت)"
+            name: "products"
+            widget: "list"
+            max: 60
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "نام", name: "name", widget: "string" }
+              - { label: "قیمت (روپے، صرف عدد۔ خالی چھوڑیں تو 'قیمت کے لیے رابطہ کریں' آئے گا)", name: "price", widget: "number", value_type: "int", min: 0, required: false }
+              - { label: "تصویر", name: "image", widget: "image" }
+              - { label: "مختصر تفصیل", name: "desc", widget: "text", required: false }
