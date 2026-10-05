@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo:    repo: akoya-tech/maha-jewlers
+  repo: akoya-tech/maha-jewlers
   branch: main
 
 media_folder: "images"
